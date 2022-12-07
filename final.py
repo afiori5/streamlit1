@@ -191,11 +191,11 @@ newdata1 = pd.DataFrame({
     "female": [female],
 })
 
-newdata1["sm_li"] = lr.predict(newdata1)
+pred = lr.predict(newdata1)
 
-newdata1
 
-if newdata1.sm_li == 1:
+
+if pred == 1:
     print("You are a LinkedIn User!")
 else:
     print("You are not a LinkedIn User.")
