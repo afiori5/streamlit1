@@ -196,6 +196,6 @@ pred = lr.predict(newdata1)
 
 
 if pred == 1:
-    print("You are a LinkedIn User!")
+    st.print("You are a LinkedIn User!")
 else:
-    print("You are not a LinkedIn User.")
+    st.print("You are not a LinkedIn User.")
