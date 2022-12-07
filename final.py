@@ -4,7 +4,7 @@ import altair as alt
 import numpy as np
 
 import os
-os.chdir("/Users/alexanderfiori/Desktop/streamlit_demos")
+os.chdir("/Users/alexanderfiori/Desktop/streamlit1")
 
 s = pd.read_csv("social_media_usage.csv")
 
