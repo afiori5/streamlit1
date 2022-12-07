@@ -11,6 +11,11 @@ s = pd.read_csv("social_media_usage.csv")
 st.markdown("#LinkedIn User Prediction App")
 
 "### Select box"
-answer = st.selectbox(label="Household Income",
-options=("$10,000 to $20,000", "SQL", "Python", "Java", "Go", "C++"))
-st.write("Here are some resources for ", answer)
+Income = st.selectbox(label="Household Income",
+options=("$10,000 to $20,000", 
+"$20,000 to $30,000", 
+"$40,000 to $50,000", 
+"$50,000 to $75,000", 
+"$100,000 to $150,000", 
+"$150,000+", 
+"Don't Know"))
