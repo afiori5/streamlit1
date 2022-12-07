@@ -13,10 +13,6 @@ options=("$10,000 to $20,000",
 "Don't Know"))
 
 
-import os
-os.chdir("/Users/alexanderfiori/Desktop/MSBA Programming Items/Programming II")
-
-
 # #### 1. Read in the data, call the dataframe "s"  and check the dimensions of the dataframe
 
 s = pd.read_csv("social_media_usage.csv")
