@@ -20,10 +20,22 @@ options=("$10,000 to $20,000",
 "$150,000+", 
 "Don't Know"))
 
+if Income == "$10,000 to $20,000":
+    Income =2
+elif Income == "$20,000 to $30,000":
+    Income =3
+elif Income == "$30,000 to $40,000":
+    Income =4
+else:
+    Income=5
+
+
 Age = st.slider(label="Enter Your Age", 
         min_value=1,
         max_value=100,
         value=50)
+
+
 
 education = st.selectbox(label="Highest Level of Education",
 options=("Some High School",  
@@ -33,20 +45,38 @@ options=("Some High School",
 "Bachelor's degree", 
 "Postgraduate Degree"))
 
+if education == "Some High School":
+    education = 1
+elif education == "High School Graduate":
+    education = 2
+else:
+    education = 3
+
 Marital = st.selectbox(label="Are you married?",
 options=("Yes", 
 "No"))
-
+if Marital == "Yes":
+    Marital = 1
+else:
+    Marital = 0
 
 Parent = st.selectbox(label="Are you the parent of a child under the age of 18?",
 options=("Yes", 
 "No"))
 
+if Parent == "Yes":
+    Parent = 1
+else:
+    Parent = 0
+
 female = st.selectbox(label="Are you a male or female?",
 options=("Female", 
 "Male"))
 
-
+if female == "Yes":
+    female = 1
+else:
+    female = 0
 
 # #### 1. Read in the data, call the dataframe "s"  and check the dimensions of the dataframe
 
@@ -83,7 +113,6 @@ ss = pd.DataFrame({
     "female":np.where(s["gender"] == 2, 1, 0)})
 
 
-ss.head()
 
 
 # #### 4. Create a target vector (y) and feature set (X)
@@ -153,9 +182,20 @@ newdata = pd.DataFrame({
 newdata["sm_li"] = lr.predict(newdata)
 
 
-newdata
+newdata1 = pd.DataFrame({
+    "Income": [{Income}],
+    "Age": [{Age}],
+    "education":[{education}],
+    "Marital":[{Marital}],
+    "Parent": [{Parent}],
+    "female": [{female}],
+})
 
-st.write(f"This person is {mar_label}, a {deg_label}, and in a {inc_label} bracket")
+newdata1["sm_li"] = lr.predict(newdata1)
 
+newdata1
 
-
+if newdata1 == 1:
+    print("You are a LinkedIn User!")
+else:
+    print("You are not a LinkedIn User.")
