@@ -193,7 +193,7 @@ newdata1 = pd.DataFrame({
 
 newdata1["sm_li"] = lr.predict(newdata1)
 
-print(newdata1)
+newdata1
 
 if newdata1["sm_li"] == 1:
     print("You are a LinkedIn User!")
