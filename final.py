@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 import numpy as np
 
-s = pd.read_csv("/Users/alexanderfiori/Desktop/stremlit1/social_media_usage.csv")
+s = pd.read_csv("/Users/alexanderfiori/Desktop/streamlit1/social_media_usage.csv")
 
 st.markdown("#LinkedIn User Prediction App")
 
