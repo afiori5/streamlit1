@@ -199,4 +199,4 @@ if pred == 1:
 else:
     x = "You are not a LinkedIn User."
 
-st.print(x)
+st.write(x)
