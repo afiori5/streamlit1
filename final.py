@@ -194,8 +194,9 @@ newdata1 = pd.DataFrame({
 pred = lr.predict(newdata1)
 
 
-
 if pred == 1:
-    st.print("You are a LinkedIn User!")
+    x = "You are a LinkedIn User!"
 else:
-    st.print("You are not a LinkedIn User.")
+    x = "You are not a LinkedIn User."
+
+st.print(x)
