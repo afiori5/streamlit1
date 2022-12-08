@@ -198,15 +198,22 @@ newdata1 = pd.DataFrame({
 
 newdata1['sm_li1'] = lr.predict(newdata1)
 
+User1 = [Income, Age, education, Marital, Parent, female]
 
-if newdata1['sm_li1'] == 1:
-    x = "You are a LinkedIn User!"
-else:
-    x = "You are not a LinkedIn User."
+predicted_class = lr.predict([User1])
 
-st.write(x)
+probs = lr.predict_proba([User1])
 
-prob = lr.predict_proba([newdata1])
-st.write({prob[0][1]})
+st.write(f"Probability that you are a LinkedIn User: {probs[0][1]}")
+
+#if newdata1['sm_li1'] == 1:
+    #x = "You are a LinkedIn User!"
+#else:
+#    x = "You are not a LinkedIn User."
+
+#st.write(x)
+
+#prob = lr.predict_proba([newdata1])
+#st.write({prob[0][1]})
 
 
