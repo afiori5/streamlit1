@@ -48,7 +48,7 @@ options=("Some High School",
 "Some College, no Degree", 
 "Two -year College or University", 
 "Bachelor's degree (BA,BS,etc.)", 
-"Postgraduate Degree (MA, MS, PhD, MD, ect."))
+"Postgraduate Degree (MA, MS, PhD, MD, ect.)"))
 
 if education == "Some High School":
     education = 1
