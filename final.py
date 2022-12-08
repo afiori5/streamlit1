@@ -204,7 +204,7 @@ predicted_class = lr.predict([User1])
 
 probs = lr.predict_proba([User1])
 
-if probs > 5:
+if probs > .5:
     x = "You are a LinkedIn User!"
 else:
     x = "You are not a LinkedIn User."
