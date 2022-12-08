@@ -206,7 +206,7 @@ probs = lr.predict_proba([User1])
 
 
 st.write(f"Prediction: {predicted_class[0]}")
-st.write("1 = LinkedIn User, 0 = Not a LinkedIn User")
+st.write("(1 = LinkedIn User, 0 = Not a LinkedIn User)")
 
 st.write(f"Probability that you are a LinkedIn User: {probs[0][1]}")
 
