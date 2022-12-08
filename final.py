@@ -7,6 +7,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
+from PIL import Image
+
+image = Image.open('LinkedIn-Blue-21-┬«@2x.png')
+st.image(image, caption='Logo available publicly on LinkedIn Brand Resources webpage', output_format='PNG')
+
 
 st.markdown("LinkedIn User Prediction App")
 
