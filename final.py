@@ -207,6 +207,6 @@ else:
 st.write(x)
 
 prob = lr.predict_proba([newdata1])
-st.write(prob)
+st.write({prob[0][1]})
 
 
