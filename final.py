@@ -204,13 +204,9 @@ predicted_class = lr.predict([User1])
 
 probs = lr.predict_proba([User1])
 
-if probs > .5:
-    x = "You are a LinkedIn User!"
-else:
-    x = "You are not a LinkedIn User."
 
-st.write(x)
-
+st.write(f"Prediction: {predicted_class[0]}")
+st.write("1 = LinkedIn User, 0 = Not a LinkedIn User")
 
 st.write(f"Probability that you are a LinkedIn User: {probs[0][1]}")
 
