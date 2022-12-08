@@ -205,3 +205,8 @@ else:
     x = "You are not a LinkedIn User."
 
 st.write(x)
+
+prob = lr.predict_proba([newdata1])
+st.write(f"Probability that you are a LinkedIn User: {prob[0][1]}")
+
+
