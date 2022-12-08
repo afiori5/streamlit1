@@ -110,9 +110,9 @@ clean_sm(df1) #function returns an array with the expected values
 
 ss = pd.DataFrame({
     "sm_li":np.where(s["web1h"] == 1, 1, 0),
-    "Income":np.where(s["income"]==9, np.nan, s["income"]),
-    "Age":np.where(s["age"]>98, np.nan, s["age"]),
-    "education":np.where(s["educ2"] >8,np.nan, s["educ2"]),
+    "Income":np.where(s["income"]==6, np.nan, s["income"]),
+    "Age":np.where(s["age"]>20, np.nan, s["age"]),
+    "education":np.where(s["educ2"] >4,np.nan, s["educ2"]),
     "Marital":np.where(s["marital"] == 1, 1, 0),
     "Parent":np.where(s["par"]==1,1,0),
     "female":np.where(s["gender"] == 2, 1, 0)})
